@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+form {
+  width: 60vw;
+  margin: auto;
+}
+
+.container {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,45 @@
+<div class="fetch-data">
+  <button class="btn btn-primary fetch">Fetch Data</button>
+</div>
+
+<form class="mt-5" enctype="multipart/form-data" method="POST" action="/">
+  <div class="form-group">
+    <label>Nama Produk</label>
+    <input type="text" class="form-control" name="nama">
+  </div>
+  <div class="form-group">
+    <label>Harga Produk </label>
+    <input type="text" class="form-control" name="harga">
+  </div>
+  <div class="form-group d-flex flex-column">
+    <label>Gambar Produk</label>
+    <input type="file" class="" name="gambar">
+  </div>
+  <div class="form-group">
+  <button id="add" type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div class="index mt-5 d-flex flex-wrap">
+
+  {{#each dataproduk}}
+  <div class="card m-3" style="width: 18rem;">
+    <img src="/img/{{product_image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{product_name}}</h5>
+      <p class="card-text">{{product_price}}</p>
+    </div>
+    <div class="card-body">
+      <button class="btn btn-info edit" id={{id}}>Edit</button>
+      <button class="btn btn-danger hapus" id={{id}}>Hapus</button>
+    </div>
+  </div>
+  {{/each}}
+    {{!-- <div class="div-produk" id={{id}} >
+      <p>{{product_name}}</p>
+      <div class="button">
+        <button class="btn btn-info edit" id={{id}}>Edit</button>
+        <button class="btn btn-danger hapus" id={{id}}>Hapus</button>
+      </div>
+    </div> --}}
+
+</div>
