@@ -69,7 +69,7 @@ $('.hapus').click(function () {
       method: 'DELETE',
     })
       .then(removeBurgerDelete)
-      .catch();
+      .then((res) => location.reload());
   });
 });
 
